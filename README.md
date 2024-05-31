@@ -1,4 +1,4 @@
-
+[screen-recorder-fri-may-31-2024-18-48-26.webm](https://github.com/coderkhushal/postpro/assets/137866759/9a45d512-214f-4df9-9c82-5746a38819ae)
 # Orderpilot
 
 PostPro 
@@ -49,6 +49,7 @@ Backend
 Install dependencies
 
 ```bash
+
   npm install
 ```
 
@@ -63,9 +64,11 @@ Run Server
 ```bash
   node dist/index.js
 ```
+[screen-recorder-fri-may-31-2024-18-48-26.webm](https://github.com/coderkhushal/postpro/assets/137866759/1b11de83-2add-4dd1-9ae3-228a97d8e34c)
 
 
-go to localhost:5173 to view the client side  
+
+
 
 
 
