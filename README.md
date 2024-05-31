@@ -1,7 +1,5 @@
-[screen-recorder-fri-may-31-2024-18-48-26.webm](https://github.com/coderkhushal/postpro/assets/137866759/9a45d512-214f-4df9-9c82-5746a38819ae)
-# Orderpilot
 
-PostPro 
+# PostPro
 
 ## Tech Stack
  
