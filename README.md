@@ -5,7 +5,9 @@
  
 - **Frontend Framework:** React js
 - **Styling:**   tailwindCSS
-- **Backend** Node.js express.js 
+- **Backend** Node.js express.js
+- **Database** PostgreSQL
+- **ORM** Prisma 
 - **Security** jsonwebtoken , bcryptjs , cryptojs 
   
 
