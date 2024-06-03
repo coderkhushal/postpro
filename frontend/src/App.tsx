@@ -9,7 +9,7 @@ import Signup from './pages/Signup'
 import PostCreation from './pages/Postcreation'
 import ResetPassword from './pages/ResetPassword'
 import ResetPasswordMain from './pages/ResetPasswordMain'
-
+import '../node_modules/shepherd.js/dist/css/shepherd.css';
 function App() {
   
   return (

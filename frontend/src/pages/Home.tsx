@@ -1,7 +1,12 @@
 
 import { Link } from 'react-router-dom'
-
+import {useHomeTour} from '../shepherdService';
+import { useEffect } from 'react';
 const Home = () => {
+	useEffect(()=>{
+        let tour = useHomeTour()
+        tour.start()
+    },[])
   return (
     <section className="ezy__header22 light pt-24 md:pt-44 bg-white  text-indigo-900 ">
 			<div className="container px-4 mx-auto relative">

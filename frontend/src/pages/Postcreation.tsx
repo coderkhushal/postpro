@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useGetToken } from '../hooks/useGetToken'
+import React, { useEffect, useState } from 'react'
+
 import { useGetAuthHeaders } from '../hooks/useGetAuthHeaders'
+import  {usePostCreationTour} from "../shepherdService"
 
 const BASE_URL_SERVER = "http://localhost:3000"
 const PostCreation = () => {
     const [content,setcontent] = useState('')
     const [title, settitle] = useState('')
-
+    useEffect(()=>{
+        let PostCreationTour = usePostCreationTour()
+        PostCreationTour.start()
+    }, [usePostCreationTour])
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -68,7 +71,7 @@ const PostCreation = () => {
                                         type="text"
                                         value={title}
                                         onChange={handleOnchange}
-                                        className="w-full bg-transparent min-h-[48px] leading-10 px-4 p-2 rounded-md outline-none border border-gray-400 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-700"
+                                        className="PostTitle w-full bg-transparent min-h-[48px] leading-10 px-4 p-2 rounded-md outline-none border border-gray-400 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-700"
                                         id="title"
                                         placeholder="Enter Title"
                                     />
@@ -78,7 +81,7 @@ const PostCreation = () => {
                                         type="text"
                                         value={content}
                                         onChange={handleOnchange}
-                                        className="w-full bg-transparent min-h-[48px] leading-10 px-4 p-2 rounded-md outline-none border border-gray-400 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-700"
+                                        className=" PostContent w-full bg-transparent min-h-[48px] leading-10 px-4 p-2 rounded-md outline-none border border-gray-400 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-700"
                                         id="content"
                                         placeholder="Enter Post Content"
                                     />
@@ -87,21 +90,12 @@ const PostCreation = () => {
                                 <button
                                     onClick={handleSubmit}
                                     className="font-semibold bg-blue-500 text-white py-3 px-8 rounded w-full mt-6"
+                                    id='PostSubmit'
                                 >
                                     Create Post
                                 </button>
 
-                                <div className="text-center mt-5 pt-4">
-                                    <p className="mb-0">
-                                        Have an account?{" "}
-                                        <Link
-                                            to="/login"
-                                            className="text-blue-600"
-                                        >
-                                            Create Post 
-                                        </Link>
-                                    </p>
-                                </div>
+                                
                             </form>
                         </div>
                     </div>

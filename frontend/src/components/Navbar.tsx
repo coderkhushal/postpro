@@ -1,13 +1,14 @@
 
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { routes } from '../constants'
 import { RouteType } from '../types';
 import { useGetToken } from '../hooks/useGetToken';
 import { useRemoveToken } from '../hooks/useRemoveToken';
 
+
 const NavbarMenu = ({ routes }: { routes: RouteType[] }) => {
     const params = window.location.href.split("/")[3];
-    
+
     return (
         <>
             {routes.map((route, i) => (
@@ -15,6 +16,7 @@ const NavbarMenu = ({ routes }: { routes: RouteType[] }) => {
                     <Link
                         className={`px-4 ${route.href.toLowerCase()==="/"+params.toLowerCase() ? "opacity-100" : "opacity-50 hover:opacity-100"
                             }`}
+                        id={route.href.substring(1, )}
                         to={route.href}
                     >
                         {route.name}
@@ -53,12 +55,12 @@ const Navbar = () => {
                             <NavbarMenu routes={routes} />
                             <li>
                   {useGetToken()?
-                                <button className="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded" onClick={()=>{useRemoveToken(); navigation("/login")}}>
+                                <button className="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded LoginNav" onClick={()=>{useRemoveToken(); navigation("/login")}}>
                             Logout
                             </button>:
                             <Link to="/login">
 
-                                <button className="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded" >
+                                <button className="border border-blue-600 bg-blue-600 text-white hover:bg-opacity-90 py-1.5 px-4 rounded LoginNav" >
                             Signup
                                 </button>
                             </Link>
