@@ -65,7 +65,9 @@ Run Server
 ```bash
   node dist/index.js
 ```
-[screen-recorder-fri-may-31-2024-18-48-26.webm](https://github.com/coderkhushal/postpro/assets/137866759/1b11de83-2add-4dd1-9ae3-228a97d8e34c)
+[screen-recorder-mon-jun-03-2024-12-47-18.webm](https://github.com/coderkhushal/postpro/assets/137866759/bf7b873b-5d7d-49a4-92d8-945caf7da43c)
+
+
 
 
 
