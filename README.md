@@ -8,6 +8,7 @@
 - **Backend** Node.js express.js
 - **Database** PostgreSQL
 - **ORM** Prisma 
+- **Walkthrough** - Shepherdjs 
 - **Security** jsonwebtoken , bcryptjs , cryptojs 
   
 
